@@ -7,10 +7,11 @@ terraform {
   }
 }
 
+//Changes the way the state file is stored
 terraform {
   backend "s3" {
     bucket = "terraform-tuesday-1125"
-    key    = "112525/terraformTuesday/terraform.tfstate" //File path and name
+    key    = "113025/terraformSunday/terraform.tfstate" //File path and name
     region = "us-west-1"
   }
 }

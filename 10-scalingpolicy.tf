@@ -1,6 +1,6 @@
-resource "aws_autoscaling_policy" "web-tier-cpu" {
+resource "aws_autoscaling_policy" "web_cpu_target_tracking" {
     name = "web-tier-cpu"
-    autoscaling_group_name = aws_autoscaling_group.barret-asg.name
+    autoscaling_group_name = aws_autoscaling_group.web_asg.name
     estimated_instance_warmup = 60
     policy_type = "TargetTrackingScaling"
 

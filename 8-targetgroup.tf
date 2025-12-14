@@ -1,10 +1,10 @@
-resource "aws_lb_target_group" "barret-lb-target-group" {
+resource "aws_lb_target_group" "web_alb_tg" {
     name = "web-tier-server-target-group"
     port = 80
-    vpc_id = aws_vpc.barret-vpc.id
+    vpc_id = aws_vpc.satelite_environment.id
     protocol = "HTTP"
 
     tags = {
-      "Name" = "web-tier-tg"
+      "Name" = "web_tier_tg"
     }
 }

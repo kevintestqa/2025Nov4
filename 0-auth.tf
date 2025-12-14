@@ -10,8 +10,8 @@ terraform {
 //Changes the way the state file is stored
 terraform {
   backend "s3" {
-    bucket = "terraform-tuesday-1125"
-    key    = "113025/terraformSunday/terraform.tfstate" //File path and name
+    bucket = "terraform-cloudfront-121425"
+    key    = "121425/cloudFront/terraform.tfstate" //File path and name
     region = "us-west-1"
   }
 }

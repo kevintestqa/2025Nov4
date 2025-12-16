@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "static_site" {
-    bucket = "kevin-storage"
+resource "aws_s3_bucket" "storage" {
+    bucket = "12-15-25-cloudfront"
     force_destroy = true
     
 }

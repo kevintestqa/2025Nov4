@@ -1,17 +1,17 @@
-resource "aws_eip" "rocket-town-eip" {
+resource "aws_eip" "nat" {
     domain = "vpc"
 
     tags = {
-      "Name" = "rocket-town-eip"
+      Name = "nat-eip"
     }
 }
 
 
-resource "aws_nat_gateway" "cosmo-canyon-nat" {
-    allocation_id = aws_eip.rocket-town-eip.id
-    subnet_id = aws_subnet.public-us-west-1a.id
+resource "aws_nat_gateway" "main" {
+    allocation_id = aws_eip.nat.id
+    subnet_id = aws_subnet.public_1a.id
     
     tags = {
-      "Name" = "cosmo-canyon-nat"
+      "Name" = "main"
     }
 }

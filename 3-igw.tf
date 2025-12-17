@@ -1,7 +1,7 @@
-resource "aws_internet_gateway" "kalm-igw" {
-    vpc_id = aws_vpc.barret-vpc.id
+resource "aws_internet_gateway" "main" {
+    vpc_id = aws_vpc.satelite_environment.id
 
     tags = {
-      "Name" = "kalm-igw"
+      "Name" = "main"
     }
 }
